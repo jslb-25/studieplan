@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Studieplan">
+<meta name="theme-color" content="#f4f5f1">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<title>Studieplan examens november</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Plan: agenda-blad. Kleur per vak (groen = Werkveld & Beleid, pruim = Recht, grijsblauw = buffer). Dagkaarten in een tijdlijn, tabs voor afvinklijsten. */
+:root{
+  --paper:#f4f5f1; --card:#ffffff; --ink:#1c2230; --muted:#5d6472; --line:#dfe2da;
+  --wb:#2f6b4f; --wb-soft:#e3efe7; --re:#7a3e6d; --re-soft:#f3e6ef; --buf:#4e6a86; --buf-soft:#e6edf4;
+  --warn:#a5561b; --warn-soft:#fbeedd; --exam:#b3261e; --exam-soft:#fbe5e3;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Source Sans 3", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#14171d; --card:#1c2029; --ink:#e9ebef; --muted:#a2a8b4; --line:#2e3440;
+    --wb:#7cc49f; --wb-soft:#1f3329; --re:#d99acb; --re-soft:#352232; --buf:#9cb6d1; --buf-soft:#232d39;
+    --warn:#f0b377; --warn-soft:#3a2a1a; --exam:#ff8a80; --exam-soft:#3d1f1d; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#14171d; --card:#1c2029; --ink:#e9ebef; --muted:#a2a8b4; --line:#2e3440;
+  --wb:#7cc49f; --wb-soft:#1f3329; --re:#d99acb; --re-soft:#352232; --buf:#9cb6d1; --buf-soft:#232d39;
+  --warn:#f0b377; --warn-soft:#3a2a1a; --exam:#ff8a80; --exam-soft:#3d1f1d; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+.wrap{max-width:980px;margin:0 auto;padding:calc(28px + env(safe-area-inset-top)) 20px calc(60px + env(safe-area-inset-bottom))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+h1{font-size:clamp(28px,5vw,40px);font-weight:800;letter-spacing:-.02em}
+h2{font-size:22px;font-weight:700;margin-bottom:12px}
+h3{font-size:17px;font-weight:600}
+.sub{color:var(--muted);margin:6px 0 0;max-width:65ch}
+.exams{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:20px 0}
+.exam{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:2px}
+.exam .k{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.exam .v{font-family:var(--display);font-size:20px;font-weight:700}
+.exam .bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:8px}
+.exam .bar i{display:block;height:100%;background:var(--c);width:0;transition:width .3s}
+.exam .pct{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.alert{background:var(--warn-soft);border:1px solid var(--warn);color:var(--ink);border-radius:10px;padding:12px 16px;margin:0 0 18px}
+.alert b{color:var(--warn)}
+nav.tabs{display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin:8px 0 20px;position:sticky;top:0;background:var(--paper);padding-top:8px;z-index:2}
+nav.tabs button{font:inherit;font-weight:600;border:0;background:none;color:var(--muted);padding:10px 14px;border-bottom:3px solid transparent;cursor:pointer}
+nav.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+nav.tabs button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--buf);outline-offset:2px}
+.panel{display:none}.panel.on{display:block}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:14px;color:var(--muted);margin-bottom:14px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:12px;height:12px;border-radius:3px;background:var(--c)}
+.week{font-family:var(--display);font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:26px 0 10px}
+.day{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:10px;display:grid;grid-template-columns:120px 1fr;gap:14px}
+.day.today{box-shadow:0 0 0 2px var(--buf)}
+.day.examday{border-color:var(--exam)}
+.dname{font-family:var(--display);font-weight:700;font-size:18px;line-height:1.15}
+.dname small{display:block;font-family:var(--body);font-weight:400;font-size:13px;color:var(--muted);margin-top:4px}
+.today-tag{display:inline-block;margin-top:6px;font-size:12px;font-weight:700;background:var(--buf);color:var(--card);border-radius:20px;padding:1px 8px}
+.fixed{font-size:14px;color:var(--muted);margin-bottom:8px}
+.blocks{display:flex;flex-direction:column;gap:8px}
+.blk{display:grid;grid-template-columns:auto 96px 1fr;gap:10px;align-items:start;background:var(--soft);border-left:4px solid var(--c);border-radius:8px;padding:9px 12px}
+.blk input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--c);cursor:pointer}
+.blk .t{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;padding-top:1px}
+.blk .ti{font-weight:700}
+.blk .how{font-size:14px;color:var(--muted)}
+.blk.done .ti,.blk.done .how{text-decoration:line-through;opacity:.6}
+.blk.ex{--c:var(--exam);--soft:var(--exam-soft)}
+.wb{--c:var(--wb);--soft:var(--wb-soft)} .re{--c:var(--re);--soft:var(--re-soft)} .buf{--c:var(--buf);--soft:var(--buf-soft)}
+.rest{font-size:14px;color:var(--muted);font-style:italic}
+.checks table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tblwrap{overflow-x:auto;margin-bottom:22px;border-radius:12px}
+.checks th,.checks td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.checks th{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--soft)}
+.checks th.c,.checks td.c{text-align:center;width:84px}
+.checks td.c input{width:20px;height:20px;accent-color:var(--c);cursor:pointer}
+.checks tr.sec td{background:var(--soft);font-family:var(--display);font-weight:700;color:var(--c)}
+.checks tr.not td{color:var(--muted);text-decoration:line-through}
+.checks small{color:var(--muted)}
+.cnote{font-size:14px;color:var(--muted);margin:-4px 0 14px;max-width:70ch}
+.method{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.m{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.m h3{margin-bottom:6px}
+.m p{margin:0 0 8px}
+.m ul{margin:0;padding-left:20px}
+.src{font-size:14px;color:var(--muted);margin-top:22px}
+.src a{color:inherit}
+.reset{font:inherit;font-size:14px;background:none;border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:6px 12px;cursor:pointer;margin-top:20px}
+@media (max-width:560px){
+  .day{grid-template-columns:1fr;gap:8px}
+  .blk{grid-template-columns:auto 1fr}
+  .blk .t{grid-column:2}
+  .blk .body{grid-column:2}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Studieplan examens november</h1>
+    <p class="sub">Van zondag 25 oktober tot je examens op 9 en 10 november. Elk blok werkt volgens de methodes die volgens onderzoek het best werken: jezelf overhoren, gespreid herhalen en vakken afwisselen. Vink af wat je gedaan hebt; je vinkjes blijven bewaard in deze browser.</p>
+  </header>
+
+  <section class="exams" aria-label="Examens en voortgang">
+    <div class="exam" style="--c:var(--wb)">
+      <span class="k">Ma 9 nov · 8:30–10:30</span>
+      <span class="v">Werkveld &amp; Beleid 1</span>
+      <span class="pct" id="p-wb">0% van de afvinklijst</span>
+      <div class="bar"><i id="b-wb"></i></div>
+    </div>
+    <div class="exam" style="--c:var(--re)">
+      <span class="k">Di 10 nov · 13:30–15:30</span>
+      <span class="v">Recht 1 (publiek recht)</span>
+      <span class="pct" id="p-re">0% van de afvinklijst</span>
+      <div class="bar"><i id="b-re"></i></div>
+    </div>
+    <div class="exam" style="--c:var(--buf)">
+      <span class="k">Planning</span>
+      <span class="v" id="v-plan">0 van 0 blokken</span>
+      <span class="pct" id="p-plan">gedaan</span>
+      <div class="bar"><i id="b-plan"></i></div>
+    </div>
+  </section>
+
+  <div class="alert"><b>Let op:</b> op di 10 nov staat de opleidingsraad (12:45–13:45). Die overlapt met de start van je examen Recht om 13:30. Meld je daar tijdig voor af.</div>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" id="t-planning" aria-selected="true" data-p="planning">Planning</button>
+    <button role="tab" id="t-wb" aria-selected="false" data-p="wb">Afvinklijst Werkveld &amp; Beleid</button>
+    <button role="tab" id="t-recht" aria-selected="false" data-p="recht">Afvinklijst Recht</button>
+    <button role="tab" id="t-methode" aria-selected="false" data-p="methode">Zo studeer je</button>
+  </nav>
+
+  <section class="panel on" id="planning">
+    <div class="legend">
+      <span><i class="dot" style="--c:var(--wb)"></i>Werkveld &amp; Beleid</span>
+      <span><i class="dot" style="--c:var(--re)"></i>Recht</span>
+      <span><i class="dot" style="--c:var(--buf)"></i>Buffer / andere vakken / herhaling</span>
+      <span><i class="dot" style="--c:var(--exam)"></i>Examen</span>
+    </div>
+    <div id="days"></div>
+  </section>
+
+  <section class="panel checks wb" id="wb">
+    <h2>Afvinklijst Werkveld &amp; Beleid 1</h2>
+    <p class="cnote">Gebaseerd op de "Examen: te kennen/begrijpen"-dia's en leerdoelen in elke powerpoint. Drie vinkjes per onderdeel: <b>Geleerd</b> (eerste keer verwerkt), <b>Uit het hoofd</b> (lukt op een leeg blad zonder te kijken), <b>Herhaald</b> (een paar dagen later nog eens getest). Het examen is gesloten boek en vraagt ook toepassen op een situatieschets.</p>
+    <div id="list-wb"></div>
+  </section>
+
+  <section class="panel checks re" id="recht">
+    <h2>Afvinklijst Recht 1</h2>
+    <p class="cnote">Volgens het leerstofblad van Yves Werbrouck, uit het cursusboek "Inleiding tot het recht". Doorstreepte onderdelen moet je <b>niet</b> kennen. Bij twijfel geldt het leerstofblad, niet wat in de les gezegd is.</p>
+    <div id="list-re"></div>
+  </section>
+
+  <section class="panel" id="methode">
+    <h2>Zo studeer je (en waarom)</h2>
+    <div class="method">
+      <div class="m"><h3>1. Overhoor jezelf</h3><p>Lees een stuk, leg het weg en schrijf op een leeg blad alles wat je nog weet. Vergelijk daarna met de dia's en vul in een andere kleur aan wat ontbrak.</p><ul><li>Flashcards voor afkortingen (OCMW, CAW, RTH, MANO, …)</li><li>Gebruik de voorbeeldvragen van Leho en uit de IJH-dia's</li></ul></div>
+      <div class="m"><h3>2. Spreid het over meerdere dagen</h3><p>Elk onderdeel komt in dit plan minstens drie keer terug: leren, na 1–3 dagen testen, en de week erna herhalen. Dat werkt beter dan alles op één avond.</p></div>
+      <div class="m"><h3>3. Wissel af</h3><p>Op de meeste dagen staan beide vakken, en binnen Werkveld &amp; Beleid wissel je tussen sectoren. Dat voelt moeilijker, maar je onthoudt het beter en leert de sectoren van elkaar onderscheiden. Dat is net wat het examen vraagt.</p></div>
+      <div class="m"><h3>4. Vraag telkens "waarom?" en "wanneer?"</h3><p>Werkveld &amp; Beleid toetst ook of je kunt uitleggen <i>waarom</i> een organisatie past bij een situatie. Koppel elke organisatie aan een eigen voorbeeld: welke cliënt stuur je naar het OCMW, welke naar het CAW, welke naar de toegangspoort?</p></div>
+      <div class="m"><h3>5. Teken schema's</h3><p>Het landschap van integrale jeugdhulp, de Belgische staatsstructuur en de hoven en rechtbanken leer je het snelst als je ze uit het hoofd natekent.</p></div>
+      <div class="m"><h3>6. Slaap is ook studeren</h3><p>Je hersenen leggen tijdens je slaap vast wat je overdag leerde. Daarom stopt het plan 's avonds op tijd, en is de avond voor elk examen rustig. Niet doorblokken tot middernacht.</p></div>
+      <div class="m"><h3>Ritme per blok</h3><ul><li>±45 min geconcentreerd, gsm in een andere kamer</li><li>5–10 min pauze, even bewegen</li><li>Laatste 10 min van elk blok: leeg blad, wat weet je nog?</li></ul></div>
+      <div class="m"><h3>Wat minder goed werkt</h3><p>Herlezen, fluo aanstrepen en lange samenvattingen overschrijven. Dat voelt productief, maar volgens onderzoek levert het weinig op. Gebruik je samenvatting vooral om jezelf te overhoren.</p></div>
+    </div>
+    <p class="src">Bronnen: Dunlosky e.a. (2013), <a href="https://www.psychologicalscience.org/news/releases/which-study-strategies-make-the-grade.html">Which Study Strategies Make the Grade?</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10368606">Madan (2023), Using Evidence-Based Learning Strategies</a> · <a href="https://www.learningscientists.org/learning-scientists-podcast/2018/3/21/episode-15-how-students-can-use-interleaving-elaboration-dual-coding-and-concrete-examples">The Learning Scientists</a> · <a href="https://dailyillini.com/news-stories/2018/12/13/experts-suggest-students-prioritize-sleep-during-finals/">Slaap en geheugen</a></p>
+  </section>
+
+  <button class="reset" id="reset" type="button">Alle vinkjes wissen</button>
+</div>
+
+<script>
+const DAYS = [
+ {week:"Week 1 · lesweek, studeren vooral 's avonds en in vrije namiddagen"},
+ {d:"2026-10-25",n:"Zo 25 okt",fixed:"Geen afspraken",b:[
+  ["19:00–20:00","buf","Startsessie (30–60 min)","Overloop beide afvinklijsten. Zoek de voorbeeldvragen W&B op Leho, leg je cursusboek Recht klaar en zet onduidelijkheden over W&B op het discussieforum: dat kan maar tot 28/10."]]},
+ {d:"2026-10-26",n:"Ma 26 okt",fixed:"Les 8:30–17:45",b:[
+  ["19:30–21:00","wb","Inleidende les (58 dia's)","4 visies (exclusie → inclusie), people first, de vensters om naar sociaal werk te kijken, kernbegrippen. Eindig met een leeg blad: 4 visies + begrippen uitschrijven."]]},
+ {d:"2026-10-27",n:"Di 27 okt",fixed:"Les 9:00–12:30 · Training 18:00–19:00",b:[
+  ["13:30–15:00","re","Deel I: wat is recht? (1)","Kenmerken van het recht, soorten regels, definitie, rechtsmisbruik. Maak meteen vragen in de kantlijn."],
+  ["15:15–16:45","wb","OCMW (1): historiek & organisatie","Ontstaan, OCMW-wet 1976 en de 3 innovaties, sociale dienst & BCSD, tendensen (inkanteling, herintegratie)."],
+  ["20:00–20:45","wb","Herhaling inleiding","Zonder te kijken: 4 visies, lijnen in de zorg, 8 B's. Daarna controleren."]]},
+ {d:"2026-10-28",n:"Wo 28 okt",fixed:"Les 8:30–12:30 · Training geven 18:15–19:15",b:[
+  ["13:30–15:00","wb","OCMW (2): hulp- en dienstverlening","RMI (leefloon, tewerkstelling, GPMI) + voorwaarden, RMD, referentiebudget, steunaanvraag & sociaal onderzoek, rol en druk op de MW."],
+  ["15:15–16:45","re","Deel I: wat is recht? (2)","Deelgebieden van het recht en bronnen van het recht. Teken een overzichtsschema."],
+  ["17:00–17:30","wb","Flashcards afkortingen OCMW","Maak de kaartjes nu, je gebruikt ze nog een paar keer."]]},
+ {d:"2026-10-29",n:"Do 29 okt",fixed:"Les 9:30–17:45 · Training 18:00–19:00 · Deadline opdracht crea",b:[
+  ["20:00–21:15","wb","Algemeen Welzijnswerk (45 dia's)","AWW vs OCMW, doelen, schakelfunctie, CAW uitgebreid, Tele-Onthaal, GBO + kernactoren, rol SW. Lange dag: houd het bij dit ene blok."]]},
+ {d:"2026-10-30",n:"Vr 30 okt",fixed:"Les 13:30–17:30",b:[
+  ["8:30–10:00","re","Deel II: kenmerken van de Belgische staat","Lees, sluit het boek en schrijf de kenmerken uit het hoofd op."],
+  ["10:15–11:45","wb","Armoede (45 dia's)","Multidimensioneel: per domein de complexiteit + een organisatie. VWAWN, Welzijnsschakels, Armoededecreet, brugfiguur, WGC, onderbescherming, beleid op 3 niveaus."],
+  ["Avond","buf","Buffer / vrij","Ruimte voor andere vakken of opdrachten. Niets nodig? Dan is je avond vrij."]]},
+ {d:"2026-10-31",n:"Za 31 okt",fixed:"Wedstrijden U07 10:30–11:40",b:[
+  ["14:00–15:30","wb","Gezinsondersteuning & Opgroeien (32 dia's)","Niveaus van ondersteuning, Groeipakket, Kind & Gezin (doel, domeinen), inloopteam, CKG, VK, Huis van het Kind, uitdagingen, rol SW."],
+  ["15:45–16:45","re","Test Deel I","Leeg blad: alles over deel I. Daarna aanvullen in een andere kleur."]]},
+ {d:"2026-11-01",n:"Zo 1 nov",fixed:"Allerheiligen",b:[
+  ["10:00–11:30","re","Deel II: politieke instellingen in federaal België","Teken het schema van de instellingen en hun bevoegdheden."],
+  ["13:30–15:00","wb","Integrale jeugdhulp (1)","Wat, 6 sectoren, historiek, de 7 doelstellingen. Roze dia's: rol van de SW situeren; blauwe dia's alleen als voorbeeld."],
+  ["15:15–16:15","wb","Weekherhaling W&B","Leeg blad per onderwerp: inleiding, OCMW, AWW. Wat lukte niet? Markeer het op je afvinklijst."]]},
+ {week:"Week 2 · herfstvakantie, studeren vooral in de namiddag"},
+ {d:"2026-11-02",n:"Ma 2 nov",fixed:"Werken 8:00–11:30",b:[
+  ["13:00–14:30","wb","Integrale jeugdhulp (2): landschap","RTH (brede instap, probleemgebonden, MDT), NRTH, toegangspoort & jeugdhulpregisseur, VOS, MANO, GV, gerechtelijke jeugdhulp, jeugddelinquentiedecreet. Teken het schema."],
+  ["14:45–16:15","re","Deel II: controlerende instellingen","Leren en daarna uit het hoofd opsommen wie wat controleert."],
+  ["16:30–17:00","re","Flashcards Recht","Begrippen uit deel I en II op kaartjes."],
+  ["Avond","buf","Buffer / andere vakken","Vrij als er niets bijkomt."]]},
+ {d:"2026-11-03",n:"Di 3 nov",fixed:"Werken 8:00–11:30 · Training 18:00–19:00",b:[
+  ["13:00–14:30","wb","Integrale jeugdhulp (3): werkveld","Ondersteunende diensten, OVBJ (contextbegeleiding, dagbegeleiding, KWE, verblijf), OOOC, CIG, pleegzorg, evaluatie decreet, toekomst ('vroeg en nabij')."],
+  ["14:45–15:45","wb","IJH: begeleidende documenten","Hoofdstuk 3 'Welzijn in Vlaanderen' (p. 53–70), kindreflex-steekkaart, regeerakkoord (p. 117–123), nieuw plan jeugdhulp."],
+  ["16:00–17:00","re","Deel IV: kenmerken van justitie","Lees, sluit het boek, vat samen in 5 zinnen."]]},
+ {d:"2026-11-04",n:"Wo 4 nov",fixed:"Vrije dag",b:[
+  ["9:00–10:30","re","Deel IV: gewone hoven en rechtbanken","Teken de rechterlijke organisatie uit het hoofd: welke rechtbank, welk niveau, welke zaken?"],
+  ["10:45–12:15","wb","IJH oefenen met casussen","Voorbeeldvragen (dia's 101–104) + casussen Bram, Juliette en Fabienne. Schrijf je antwoord uit en motiveer."],
+  ["13:30–15:00","wb","Test armoede + gezinsondersteuning","Leeg blad, daarna aanvullen. Zelf voorbeelden bedenken per domein."],
+  ["15:15–16:15","re","Test Deel I + II","Flashcards + leeg blad. Wat fout ging, opnieuw na 30 minuten."],
+  ["16:30–17:30","buf","Buffer / andere vakken","Vrij als er niets bijkomt."]]},
+ {d:"2026-11-05",n:"Do 5 nov",fixed:"Werken 8:00–11:30 · Training 18:00–19:00",b:[
+  ["13:00–14:30","wb","Verbanden leggen","Vergelijk OCMW, CAW, Kind & Gezin en IJH: voor wie, welke lijn, rechtstreeks toegankelijk? Bedenk 5 situaties en kies telkens de juiste organisatie."],
+  ["14:45–16:00","re","Test Deel IV + flashcards","Rechtbankschema natekenen, kaartjes van alle delen door elkaar."]]},
+ {d:"2026-11-06",n:"Vr 6 nov",fixed:"Werken 8:00–11:30",b:[
+  ["13:00–14:30","wb","Proefexamen W&B","Maak zelf 15 vragen over alle 6 powerpoints (of gebruik de voorbeeldvragen van Leho) en beantwoord ze gesloten boek, met timer."],
+  ["14:45–15:45","wb","Fouten bijwerken","Alles wat fout was opnieuw leren en op je afvinklijst markeren."],
+  ["16:00–17:00","re","Herhaling Deel II","Staatsstructuur en instellingen uit het hoofd natekenen."]]},
+ {d:"2026-11-07",n:"Za 7 nov",fixed:"Werken 8:00–11:30 · Wedstrijden U07",b:[
+  ["13:30–15:00","re","Proefexamen Recht","Vragen over alle te kennen delen, gesloten boek, met timer."],
+  ["15:15–16:15","wb","Zwakke punten W&B","Alleen de onderdelen zonder vinkje 'Herhaald'."],
+  ["Avond","buf","Buffer / vrij",""]]},
+ {d:"2026-11-08",n:"Zo 8 nov",fixed:"Werken 8:00–11:30",b:[
+  ["13:00–14:30","wb","Laatste ronde W&B","Afkortingen-flashcards, en per powerpoint de leerdoelen hardop beantwoorden."],
+  ["14:45–15:30","wb","Laatste zwakke punten",""],
+  ["15:45–16:30","re","Korte ronde Recht","Flashcards, zodat recht niet wegzakt. Daarna stoppen."],
+  ["Avond","buf","Rust en vroeg slapen","Geen nieuwe leerstof meer. Slaap helpt je hersenen om alles vast te leggen."]]},
+ {week:"Examens"},
+ {d:"2026-11-09",n:"Ma 9 nov",exam:true,fixed:"",b:[
+  ["8:30–10:30","ex","Examen Werkveld & Beleid 1","Auditorium KWE.P.-1.009. Succes!"],
+  ["13:30–15:00","re","Recht: leeg blad per deel","Deel I, II en IV elk 20 minuten uit het hoofd, daarna controleren."],
+  ["15:15–16:15","re","Recht: zwakke punten",""],
+  ["Avond","buf","Rust en vroeg slapen",""]]},
+ {d:"2026-11-10",n:"Di 10 nov",exam:true,fixed:"Opleidingsraad 12:45 (overlapt, afmelden) · Training 18:00",b:[
+  ["9:00–10:30","re","Lichte laatste herhaling","Flashcards en schema's. Niets nieuws meer."],
+  ["13:30–15:30","ex","Examen Recht 1","Auditorium KWE.P.-1.009. Succes!"]]}
+];
+
+const WB = [
+ ["Inleidende les",[
+  "De 4 visies op mensen: exclusie, segregatie, integratie, inclusie (+ wat is de goede benadering?)",
+  "People first-terminologie",
+  "Door wie: betrokken overheden, wie stuurt aan (publiek / privaat / commercieel), formele vs informele zorg",
+  "Waar: ambulant, residentieel, semi-residentieel; schaalgrootte",
+  "Met wie, voor wie, waarvoor: interventieniveau, doelgroepen (categoriaal), levensdomeinen",
+  "Toegankelijkheid: 0e–3e lijn, rechtstreeks/niet rechtstreeks toegankelijk, 8 B's",
+  "Begrippen: subsidiariteit van de zorg, vermarkting, participatie, zelfregie, outreachend werken, vermaatschappelijking"]],
+ ["OCMW",[
+  "Basisbegrippen & afkortingen",
+  "De twee spelers in een lokaal bestuur; wat doen de sociale dienst en het BCSD?",
+  "Historiek + waarom de OCMW-wet van 1976 zo belangrijk was (3 innovaties)",
+  "Huidige evoluties: herintegratie-denken en inkanteling",
+  "Hulp- en dienstverlening in grote lijnen + eigen voorbeelden per doelgroep/domein",
+  "Wat een referentiebudget is",
+  "RMI: leefloon, tewerkstelling, GPMI + voorwaarden",
+  "Procedure steunaanvraag: sociaal onderzoek, huisbezoek, dossieropmaak",
+  "Rol van de maatschappelijk werker en waarom die onder druk staat"]],
+ ["Algemeen Welzijnswerk",[
+  "Basisbegrippen & afkortingen",
+  "Verschillen en gelijkenissen OCMW – AWW",
+  "Wat is AWW + doelstellingen",
+  "De schakelfunctie",
+  "CAW uitgebreid (doelen, domeinen, aanbod) en Tele-Onthaal",
+  "Geïntegreerd Breed Onthaal (GBO) en de kernactoren",
+  "Rol van de sociaal werker in het AWW"]],
+ ["Armoede & maatschappelijke kwetsbaarheid",[
+  "(Kans)armoede als multidimensioneel probleem, met eigen voorbeelden",
+  "Per domein (inkomen, wonen, onderwijs, arbeid, welzijn & gezondheid, justitie, ontmoeting): complexiteit + organisatie/interventie",
+  "VWAWN, Welzijnsschakels en Welzijnszorg, Vlaams Armoededecreet",
+  "CLB, brugfiguur, wijkgezondheidscentrum, onderbescherming",
+  "Armoedebeleid op federaal, Vlaams en lokaal niveau"]],
+ ["Gezinsondersteuning & Opgroeien",[
+  "Welke ondersteuning op welk overheidsniveau",
+  "Het Groeipakket",
+  "Kind & Gezin: doelstelling, begeleiding jonge kinderen, domeinen",
+  "Inloopteam, CKG, Vertrouwenscentrum Kindermishandeling, Huis van het Kind",
+  "Uitdagingen kinderopvang en gezinsondersteunende initiatieven",
+  "Wat belangrijk is als SW in een gezinsondersteunend initiatief"]],
+ ["Integrale jeugdhulp",[
+  "Wat is IJH, de 6 sectoren, historiek",
+  "De 7 doelstellingen (uitleggen + eigen voorbeeld)",
+  "RTH: brede instap, probleemgebonden hulp, MDT",
+  "NRTH, intersectorale toegangspoort, jeugdhulpregisseur",
+  "Verontrusting: VOS, MANO, gemandateerde voorzieningen",
+  "Gerechtelijke jeugdhulp + jeugddelinquentiedecreet; vrijwillig / aanklampend / gedwongen",
+  "Ondersteunende diensten",
+  "OVBJ (contextbegeleiding, autonoom wonen, dagbegeleiding, KWE, verblijf), OOOC, CIG, pleegzorg",
+  "Evaluatie decreet, netwerken RTH, toekomst ('vroeg en nabij') + 2 knelpunten",
+  "Begeleidende docs: hoofdstuk 3 (p. 53–70), kindreflex, regeerakkoord, plan jeugdhulp",
+  "Voorbeeldvragen + casussen Bram, Juliette, Fabienne"]],
+ ["Algemeen",[
+  "Vragen gesteld op het discussieforum (vóór 28/10)",
+  "Voorbeeldvragen van Leho gemaakt",
+  "Proefexamen gemaakt en fouten bijgewerkt"]]
+];
+
+const RE = [
+ ["Deel I: Wat is recht?",[
+  ["Kenmerken van het recht"],["Soorten regels"],["Definitie van het recht"],
+  ["Objectief vs subjectief recht",1],["Rechtssubject vs rechtsobject",1],
+  ["Rechtsmisbruik"],["Soorten subjectieve rechten",1],
+  ["Deelgebieden van het recht"],["Bronnen van het recht"]]],
+ ["Deel II: De Belgische staatsstructuur",[
+  ["Kenmerken van de Belgische staat"],["Politieke instellingen in federaal België"],["Controlerende instellingen"]]],
+ ["Deel III: Internationaal recht",[["Volledig deel III",1]]],
+ ["Deel IV: Justitie",[["De kenmerken van justitie"],["De gewone hoven en rechtbanken"]]],
+ ["Algemeen",[["Flashcards gemaakt voor alle te kennen begrippen"],["Proefexamen gemaakt en fouten bijgewerkt"]]]
+];
+
+let S = {};
+try { S = JSON.parse(localStorage.getItem("studieplan-jasper") || "{}"); } catch(e) { S = {}; }
+function save(){ try { localStorage.setItem("studieplan-jasper", JSON.stringify(S)); } catch(e){} }
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+
+const todayISO = (()=>{ const d=new Date(); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); })();
+
+function renderDays(){
+  let h = "";
+  DAYS.forEach(day=>{
+    if(day.week){ h += `<div class="week">${esc(day.week)}</div>`; return; }
+    const isToday = day.d === todayISO;
+    h += `<article class="day${isToday?" today":""}${day.exam?" examday":""}" id="d-${day.d}">
+      <div class="dname">${esc(day.n)}${isToday?'<br><span class="today-tag">Vandaag</span>':""}</div>
+      <div>${day.fixed?`<div class="fixed">Vast: ${esc(day.fixed)}</div>`:""}<div class="blocks">`;
+    day.b.forEach((b,i)=>{
+      const [t,v,ti,how] = b; const id = `p-${day.d}-${i}`; const on = !!S[id];
+      h += `<label class="blk ${v}${on?" done":""}" for="${id}">
+        <input type="checkbox" id="${id}" data-k="${id}" ${on?"checked":""}>
+        <span class="t">${esc(t)}</span>
+        <span class="body"><span class="ti">${esc(ti)}</span>${how?`<br><span class="how">${esc(how)}</span>`:""}</span>
+      </label>`;
+    });
+    h += `</div></div></article>`;
+  });
+  document.getElementById("days").innerHTML = h;
+}
+
+function renderList(el, data, key, isRecht){
+  let h = "";
+  data.forEach((sec,si)=>{
+    h += `<div class="tblwrap"><table><thead><tr><th>${esc(sec[0])}</th><th class="c">Geleerd</th><th class="c">Uit het hoofd</th><th class="c">Herhaald</th></tr></thead><tbody>`;
+    sec[1].forEach((it,ii)=>{
+      const label = isRecht ? it[0] : it; const not = isRecht && it[1];
+      if(not){ h += `<tr class="not"><td>${esc(label)} <small>(niet kennen)</small></td><td class="c"></td><td class="c"></td><td class="c"></td></tr>`; return; }
+      h += `<tr><td>${esc(label)}</td>`;
+      ["a","b","c"].forEach(s=>{ const id=`${key}-${si}-${ii}-${s}`; h += `<td class="c"><input type="checkbox" id="${id}" data-k="${id}" aria-label="${esc(label)}: ${s==="a"?"geleerd":s==="b"?"uit het hoofd":"herhaald"}" ${S[id]?"checked":""}></td>`; });
+      h += `</tr>`;
+    });
+    h += `</tbody></table></div>`;
+  });
+  el.innerHTML = h;
+}
+
+function progress(){
+  const calc = sel => { const all=[...document.querySelectorAll(sel)]; const d=all.filter(x=>x.checked).length; return [d, all.length]; };
+  const [wd,wt] = calc("#list-wb input"); const [rd,rt] = calc("#list-re input"); const [pd,pt] = calc("#days input");
+  const pc = (a,b)=> b?Math.round(a/b*100):0;
+  document.getElementById("p-wb").textContent = pc(wd,wt)+"% van de afvinklijst";
+  document.getElementById("b-wb").style.width = pc(wd,wt)+"%";
+  document.getElementById("p-re").textContent = pc(rd,rt)+"% van de afvinklijst";
+  document.getElementById("b-re").style.width = pc(rd,rt)+"%";
+  document.getElementById("v-plan").textContent = pd+" van "+pt+" blokken";
+  document.getElementById("b-plan").style.width = pc(pd,pt)+"%";
+}
+
+document.addEventListener("change", e=>{
+  const k = e.target.dataset && e.target.dataset.k; if(!k) return;
+  if(e.target.checked) S[k]=1; else delete S[k];
+  save();
+  const blk = e.target.closest(".blk"); if(blk) blk.classList.toggle("done", e.target.checked);
+  progress();
+});
+
+function showTab(p){
+  document.querySelectorAll("nav.tabs button").forEach(b=>b.setAttribute("aria-selected", b.dataset.p===p ? "true":"false"));
+  document.querySelectorAll(".panel").forEach(s=>s.classList.toggle("on", s.id===p));
+  try{ localStorage.setItem("studieplan-tab", p); }catch(e){}
+}
+document.querySelectorAll("nav.tabs button").forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.p)));
+
+let resetArmed = false;
+document.getElementById("reset").addEventListener("click", e=>{
+  if(!resetArmed){ resetArmed=true; e.target.textContent="Zeker? Klik nog eens om alles te wissen"; setTimeout(()=>{resetArmed=false; e.target.textContent="Alle vinkjes wissen";},4000); return; }
+  S={}; save(); init(); resetArmed=false; e.target.textContent="Alle vinkjes wissen";
+});
+
+function init(){
+  renderDays();
+  renderList(document.getElementById("list-wb"), WB, "wb", false);
+  renderList(document.getElementById("list-re"), RE, "re", true);
+  progress();
+}
+init();
+let start = "planning";
+const hash = location.hash.replace("#","");
+if(["planning","wb","recht","methode"].includes(hash)) start = hash;
+else { try{ const t=localStorage.getItem("studieplan-tab"); if(t) start=t; }catch(e){} }
+showTab(start);
+</script>
+</body>
+</html>
